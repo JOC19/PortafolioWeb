@@ -18,6 +18,11 @@
     src: url(../Fuentes/Aleo/Aleo-Bold.ttf);
 }
 
+body
+{
+    font-family: aleo;
+}
+
 .Contenedor
 {
     width: 90%;
@@ -65,7 +70,7 @@
 .Contenedor .Aside
 {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 50px;
     grid-area: aside;
     background: linear-gradient(to top, rgb(10, 66, 131) 0%, rgb(25, 123, 215) 100%);
     grid-template-areas: 
@@ -82,7 +87,8 @@
 .Aside .Perfil,
 .Aside .Diseño-1,
 .Aside .Diseño-2,
-.Aside .Diseño-3
+.Aside .Diseño-3,
+.Aside .Contacto
 {
     width: 80%;
     display: grid;
@@ -95,41 +101,84 @@
 .Aside .Perfil h3 i,
 .Aside .Diseño-1 h3 i,
 .Aside .Diseño-2 h3 i,
-.Aside .Diseño-3 h3 i
+.Aside .Diseño-3 h3 i,
+.Aside .Contacto h3 a i
 {
-    font-size: 22px;
-    color: #83bdff;
+    padding: 10px;
+    color: #0a4283;
+    border-radius: 10px;
+    transition: .5s ease;
+    text-decoration: none;    
+    background: #ededed;
+    box-shadow: 0px 0px 20px 0.5px rgb(10, 66, 131);
+}
+
+.Diseño-1 p,
+.Diseño-2 p
+{
+    max-width: 38px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;    
+    background: #ededed;
+    box-shadow: 0 0 5px 1px rgba(10, 66, 131, 0.541);
+    
+    /*---Grid---*/    
+    display: grid;
+    grid-gap: 25px;  
+    /*---FleBox---*/
+    display: flex;
+    align-items: center;
+}
+
+
+.Aside .Diseño-1 p i,
+.Aside .Diseño-2 p i,
+.Aside .Contacto a i
+{
+    color: #197bd7;
 }
 
 .Aside .Diseño-1 h3 a,
 .Aside .Diseño-2 h3 a,
-.Aside .Diseño-3 h3 a
+.Aside .Diseño-3 h3 a,
+.Aside .Contacto h3 a
 {
     color: #ffffff;
     transition: .5s ease;
     text-decoration: none;
 }
 
-
-
 .Aside .Diseño-1 h3 a:hover,
 .Aside .Diseño-2 h3 a:hover,
-.Aside .Diseño-3 h3 a:hover
+.Aside .Diseño-3 h3 a:hover,
+.Aside .Contacto h3 a:hover
 {
     color: #d6d6d6;
 }
 
-.Diseño-1 p,
-.Diseño-2 p
+.Contacto .RedSocial
 {
-    width: 50%;    
+    width: 100%;
     display: grid;
-    grid-gap: 15px;
-    display: flex;   
+    grid-gap: 5px;
+    display: flex;
+    align-items: center;
 }
+
+.Contacto .RedSocial a
+{
+    padding: 10px;
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+
+
 
 .Contenedor .Main
 {
     grid-area: main;
-    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgb(237, 237, 237) 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(246,246,246,1) 47%, rgb(237, 237, 237) 100%);
 }
