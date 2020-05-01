@@ -63,8 +63,8 @@ body
 .Header .HeaderImg img
 {
     width: 250px;
-    border-radius: 5px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.192);
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0.5px #000000;
 }
 
 .Contenedor .Aside
@@ -75,16 +75,23 @@ body
     background: linear-gradient(to top, rgb(10, 66, 131) 0%, rgb(25, 123, 215) 100%);
     grid-template-areas: 
     "perfil"
-    "diseño-1"
-    "diseño-2";
+    "estudios"
+    "diseño-1"    
+    "diseño-2"
+    "diseño-3"
+    "contacto";
     grid-auto-columns: 1fr;
     grid-template-rows: minmax(500px) 1fr;
 }
 
 .Aside .Perfil{grid-area: perfil;}
+.Aside .Estudios{grid-area: estudios;}
 .Aside .Diseño-1{grid-area: diseño-1;}
 .Aside .Diseño-2{grid-area: diseño-2;}
+.Aside .Diseño-2{grid-area: diseño-3;}
+.Contacto{grid-area: contacto;}
 .Aside .Perfil,
+.Aside .Estudios,
 .Aside .Diseño-1,
 .Aside .Diseño-2,
 .Aside .Diseño-3,
@@ -98,57 +105,91 @@ body
     font-family: aleo;
 }
 
+.Aside .Perfil h3,
+.Aside .Estudios h3,
+.Aside .Diseño-1 h3,
+.Aside .Diseño-2 h3,
+.Aside .Diseño-3 h3,
+.Aside .Contacto h3
+{
+    font-size: 18px;
+    font-family: aleo;
+    
+}
+
 .Aside .Perfil h3 i,
+.Aside .Estudios h3 i,
 .Aside .Diseño-1 h3 i,
 .Aside .Diseño-2 h3 i,
 .Aside .Diseño-3 h3 i,
-.Aside .Contacto h3 a i
+.Aside .Contacto h3 i
 {
-    padding: 10px;
-    color: #0a4283;
-    border-radius: 10px;
+    padding: 5px;
+    color: #ededed;
+    border-radius: 2px;
     transition: .5s ease;
     text-decoration: none;    
-    background: #ededed;
-    box-shadow: 0px 0px 20px 0.5px rgb(10, 66, 131);
+    background: #093a72;
+    box-shadow: 0px 0px 5px 0.5px rgb(10, 66, 131);
 }
 
-.Diseño-1 p,
-.Diseño-2 p
+.Estudios .ProGre,
+.Diseño-1 .ProGre,
+.Diseño-2 .ProGre
 {
-    max-width: 38px;
-    padding: 10px 12px;
-    border-radius: 10px;
-    text-decoration: none;    
-    background: #ededed;
-    box-shadow: 0 0 5px 1px rgba(10, 66, 131, 0.541);
+    width: 100%;
     
     /*---Grid---*/    
     display: grid;
-    grid-gap: 25px;  
+    grid-gap: 18px;  
     /*---FleBox---*/
     display: flex;
-    align-items: center;
+    align-items: center; 
 }
 
-
-.Aside .Diseño-1 p i,
-.Aside .Diseño-2 p i,
-.Aside .Contacto a i
+.Estudios .ProGre .progress,
+.Diseño-1 .ProGre .progress,
+.Diseño-2 .ProGre .progress
 {
-    color: #197bd7;
+    background: #0a4283;
+    box-shadow: 0 0 4px 1px rgba(10, 66, 131, 0.541);
 }
 
+.Aside .Estudios .ProGre i,
+.Aside .Diseño-1 .ProGre i,
+.Aside .Diseño-2 .ProGre i 
+{
+    min-width: 30px;
+    padding: 5px;
+    font-size: 18px;
+    color: #0a4283;
+    text-align: center;
+    border-radius: 2px;
+    background: #ededed;
+    box-shadow: 0 0 4px 1px rgba(10, 66, 131, 0.541);
+}
+
+.Aside .Perfil h3,
+.Aside .Estudios h3 a,
 .Aside .Diseño-1 h3 a,
 .Aside .Diseño-2 h3 a,
 .Aside .Diseño-3 h3 a,
 .Aside .Contacto h3 a
 {
     color: #ffffff;
+    text-align: center;
     transition: .5s ease;
     text-decoration: none;
+    
+    /*---Grid---*/    
+    display: grid;
+    grid-gap: 15px;  
+    /*---FleBox---*/
+    display: flex;
+    align-items: center;
 }
 
+.Aside .Estudios h3 a:hover,
 .Aside .Diseño-1 h3 a:hover,
 .Aside .Diseño-2 h3 a:hover,
 .Aside .Diseño-3 h3 a:hover,
@@ -159,23 +200,30 @@ body
 
 .Contacto .RedSocial
 {
-    width: 100%;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     display: flex;
     align-items: center;
 }
 
 .Contacto .RedSocial a
 {
-    padding: 10px;
-    border-radius: 10px;
-
+    width: 100%;    
+    padding: 5px;
+    font-size: 16px;
+    color: #0a4283;
+    border-radius: 2px;
+    text-align: center;
+    transition: .5s ease;
     background: #ffffff;
 }
 
-
-
+.Contacto .RedSocial a:hover
+{
+    color: #0a4283;
+    background: #dadada;
+    box-shadow: 0px 0px 5px .5px rgb(4, 34, 68);
+}
 
 .Contenedor .Main
 {
